@@ -2,3 +2,65 @@
 ---
 
 @import "jekyll-theme-midnight";
+
+/* Ensure the header and navigation have no background */
+
+  #wrapper {
+    background-color: #ffffff; /* Or use a preferred color like #ffffff */
+    padding: 10px;
+  }
+
+  #wrapper nav {
+    display: block;
+    text-align: center;
+    // padding: 10px 10px 10px 10px;
+    background-color: transparent; /* Remove any background applied to nav */
+  }
+
+  .social-bar {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    gap: 15px; /* Space between items */
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Ensure no background for ul */
+  }
+
+  .site-nav {
+    display: flex;
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    gap: 15px; /* Space between items */
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Ensure no background for ul */
+  }
+
+  /* Media Query for Narrow Screens */
+  @media (max-width: 768px) {
+      .site-nav {
+        flex-direction: row;
+        flex-wrap: wrap; 
+      }
+      .social-bar {
+        flex-direction: row;
+      }
+
+      .site-nav li {
+        margin-top: 10px;
+        margin-bottom: 10px; /* Add spacing between items */
+      }
+      .social-bar li {
+        margin-top: 10px;
+        margin-bottom: 10px; /* Add spacing between items */
+      }
+  }
+  
+  .image-wrap .image-right {
+    float: right;
+    margin-left: 15px;  /* Adjust spacing between image and text */
+    max-width: 30%;  /* Adjust image size */
+    height: auto;
+    border-radius: 15px;  /* This rounds the edges of the image */
+  }
