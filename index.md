@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: redirect
+redirect_to: /about/
 ---
+
 
 Text can be **bold**, _italic_, or ~~strikethrough~~.
 
