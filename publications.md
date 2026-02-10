@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Publication
-permalink: /Publications/
+permalink: /publications/
 ---
 
 ## Preprint
