@@ -24,7 +24,25 @@
     {% include head-custom.html %}
   </head>
   <body>
-    <div id="header">
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>{{ site.title | default: site.github.repository_name }}</h1>
+          <p>{{ site.description | default: site.github.project_tagline }}</p>
+          <hr>
+            <nav>
+              <ul class="site-nav">
+                <li><a href="/">About Me</a></li>
+                <li><a href="/publications">Publication</a></li>
+                <li><a href="/conferences">Conference</a></li>
+                <li><a href="/contact/">Contact</a></li>
+              </ul>
+            </nav>
+
+        </div>
+
+        {{ content }}
+        <div id="header">
       <nav>
         <ul class="social-bar">
           <li>
@@ -45,32 +63,8 @@
         </ul>
       </nav>
     </div><!-- end header -->
-    <div class="wrapper">
-      <section>
-        <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <p>{{ site.description | default: site.github.project_tagline }}</p>
-          <hr>
-            <nav>
-              <ul class="site-nav">
-                <li><a href="/">About Me</a></li>
-                <li><a href="/publications">Publication</a></li>
-                <li><a href="/conferences">Conference</a></li>
-                <li><a href="/contact/">Contact</a></li>
-              </ul>
-            </nav>
 
-        </div>
-
-        {{ content }}
-
-        <div class="footer-social">
-          <ul class="social-bar">
-            <li><a href="https://github.com/sudipto-shaha">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/sudipto-kumar-shaha">LinkedIn</a></li>
-            <li><a href="mailto:sudiptokumarshaha@gmail.com">Email</a></li>   
-          </ul>
-        </div>
+        
 
 
       </section>
