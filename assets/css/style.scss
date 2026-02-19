@@ -3,64 +3,93 @@
 
 @import "jekyll-theme-midnight";
 
-/* Ensure the header and navigation have no background */
+/* Main wrapper */
+.wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+}
 
-  #wrapper {
-    background-color: #ffffff; /* Or use a preferred color like #ffffff */
-    padding: 10px;
-  }
+/* Navigation under title */
+.site-nav {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
-  #wrapper nav {
-    display: block;
-    text-align: center;
-    // padding: 10px 10px 10px 10px;
-    background-color: transparent; /* Remove any background applied to nav */
-  }
+.site-nav li a {
+  text-decoration: none;
+}
 
-  .social-bar {
-    display: flex;
-    list-style: none; /* Remove bullet points */
-    gap: 15px; /* Space between items */
-    justify-content: center;
-    align-items: center;
-    background-color: transparent; /* Ensure no background for ul */
-  }
+/* Footer Social Bar */
+.site-footer {
+  margin-top: 80px;
+  padding: 40px 0;
+  text-align: center;
+  background: transparent;
+}
 
+.social-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-bar a {
+  display: inline-block;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background-color: #6b5b5b;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s ease;
+}
+
+.social-bar a:hover {
+  background-color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .site-nav {
-    display: flex;
-    list-style: none; /* Remove bullet points */
-    padding: 0;
-    margin: 0;
-    gap: 15px; /* Space between items */
-    justify-content: center;
-    align-items: center;
-    background-color: transparent; /* Ensure no background for ul */
+    flex-wrap: wrap;
   }
 
-  /* Media Query for Narrow Screens */
-  @media (max-width: 768px) {
-      .site-nav {
-        flex-direction: row;
-        flex-wrap: wrap; 
-      }
-      .social-bar {
-        flex-direction: row;
-      }
+  .site-nav li,
+  .social-bar li {
+    margin: 8px 0;
+  }
+}
 
-      .site-nav li {
-        margin-top: 10px;
-        margin-bottom: 10px; /* Add spacing between items */
-      }
-      .social-bar li {
-        margin-top: 10px;
-        margin-bottom: 10px; /* Add spacing between items */
-      }
-  }
-  
-  .image-wrap .image-right {
-    float: right;
-    margin-left: 15px;  /* Adjust spacing between image and text */
-    max-width: 30%;  /* Adjust image size */
-    height: auto;
-    border-radius: 15px;  /* This rounds the edges of the image */
-  }
+/* Image Styling */
+.image-wrap .image-right {
+  float: right;
+  margin-left: 15px;
+  max-width: 30%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.image-wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Push footer to bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.wrapper {
+  flex: 1;
+}
